@@ -1,15 +1,15 @@
 package uebungsblatt14;
 
-public class TurmImpl extends AbstractFigur implements Turm
+public class Aufg1_TurmImpl extends Aufg1_AbstractFigur implements Aufg1_Turm
 {
-  public TurmImpl(int x, int y)
+  public Aufg1_TurmImpl(int x, int y)
   {
     super(x, y);
   }
 
-  public Brett gibErlaubteFelder()
+  public Aufg1_Brett gibErlaubteFelder()
   {
-    Brett brett = new Brett();
+    Aufg1_Brett brett = new Aufg1_Brett();
     for (int i = 1; i <= 8; i++)
     {
       brett.markiereFeld(i, y);
@@ -20,8 +20,8 @@ public class TurmImpl extends AbstractFigur implements Turm
   
   public static void main(String[] args)
   {
-    TurmImpl turm = new TurmImpl(4,5);
-    Brett brett = turm.gibErlaubteFelder();
+    Aufg1_TurmImpl turm = new Aufg1_TurmImpl(4,5);
+    Aufg1_Brett brett = turm.gibErlaubteFelder();
     for (int j = 1; j <= 8; j++)
     {
       for (int i = 1; i <= 8; i++)

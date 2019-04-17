@@ -1,11 +1,11 @@
 package uebungsblatt14;
 
-public abstract class AbstractFigur implements Figur
+public abstract class Aufg1_AbstractFigur implements Aufg1_Figur
 {
   int x;
   int y;
   
-  public AbstractFigur(int x, int y)
+  public Aufg1_AbstractFigur(int x, int y)
   {
     setX(x);
     setY(y);

@@ -1,15 +1,15 @@
 package uebungsblatt14;
 
-public class LaeuferImpl extends AbstractFigur implements Laeufer
+public class Aufg1_LaeuferImpl extends Aufg1_AbstractFigur implements Aufg1_Laeufer
 {
-  public LaeuferImpl(int x, int y)
+  public Aufg1_LaeuferImpl(int x, int y)
   {
     super(x, y);
   }
 
-  public Brett gibErlaubteFelder()
+  public Aufg1_Brett gibErlaubteFelder()
   {
-    Brett brett = new Brett();
+    Aufg1_Brett brett = new Aufg1_Brett();
     //TODO: Ergänzen Sie den Algorithmus zur Bestimmung der Felder
     if (x > 0 && x < 9 && y > 0 && y < 9){					//Stelle an dem die Figur steht - checkt ob innerhalb des Arrays
     	brett.markiereFeld(x, y);
@@ -58,8 +58,8 @@ public class LaeuferImpl extends AbstractFigur implements Laeufer
   
   public static void main(String[] args)
   {
-    LaeuferImpl l = new LaeuferImpl(4,5); 
-    Brett brett = l.gibErlaubteFelder();
+    Aufg1_LaeuferImpl l = new Aufg1_LaeuferImpl(4,5); 
+    Aufg1_Brett brett = l.gibErlaubteFelder();
     for (int j = 1; j <= 8; j++)
     {
       for (int i = 1; i <= 8; i++)

@@ -1,10 +1,10 @@
 package uebungsblatt14;
 
-public class Brett
+public class Aufg1_Brett
 {
   boolean[][] brett = new boolean[8][8];
   
-  public Brett()
+  public Aufg1_Brett()
   {
     
   }
@@ -19,9 +19,9 @@ public class Brett
     return brett[x-1][y-1];
   }
   
-  public Brett kombiniere(Brett brett1) 
+  public Aufg1_Brett kombiniere(Aufg1_Brett brett1) 
   {
-	  Brett kombiniertesBrett = new Brett();
+	  Aufg1_Brett kombiniertesBrett = new Aufg1_Brett();
 	  kombiniertesBrett.brett = this.brett; // braucht man this. ?
 	  
 	  for(int i = 1; i < 9; i++) 

@@ -1,11 +1,11 @@
 package uebungsblatt14;
 
-public class Feld
+public class Aufg1_Feld
 {
   int x;
   int y;
   
-  public Feld(int x, int y)
+  public Aufg1_Feld(int x, int y)
   {
     this.x = x;
     this.y = y;
