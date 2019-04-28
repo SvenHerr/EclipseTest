@@ -1,7 +1,5 @@
 package uebungsblatt14;
 
-import java.util.Random;
-
 public class Aufg4_Main 
 {
 	
@@ -51,7 +49,6 @@ public class Aufg4_Main
 		
 		System.out.println("Antwort Mensch = " + entscheidungMensch);
 		System.out.println("Antwort Roboter = " + entscheidungRoboter);
-		
 	}
 	
 	public static void option2() 
@@ -83,7 +80,6 @@ public class Aufg4_Main
 				gefahrVon = Aufg4_Gefahren.GEFAHR_VORNE;
 			}
 			
-			
 			entscheidungMensch = mensch.entscheide(gefahrVon);
 			entscheidungRoboter = roboter.entscheide(gefahrVon);
 			
@@ -107,7 +103,7 @@ public class Aufg4_Main
 		System.out.println(countUnentschieden);
 	}
 	
-	public static void option3() 
+	public static void option3() // b) 		=>	Cyborg
 	{
 		Aufg4_Cyborg cyborg = new Aufg4_Cyborg();
 		
