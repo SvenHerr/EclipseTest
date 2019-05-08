@@ -28,8 +28,6 @@ public class Aufgabe3
 		duration = endTime - startTime;
 		System.out.println("Mit Buffer:" + duration);
 		
-		
-		
 	}
 	
 	public static boolean teilaufgabeA() 
