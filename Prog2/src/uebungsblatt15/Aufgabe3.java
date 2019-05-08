@@ -41,8 +41,8 @@ public class Aufgabe3
 			try 
 			{
 				System.out.println("Bitte geben Sie den Pad ein: ");
-				dateiPfad = "musik1.mp3";
-				//dateiPfad = scan.nextLine();
+				//dateiPfad = "musik1.mp3";
+				dateiPfad = scan.nextLine();
 				fis = new FileInputStream(dateiPfad);
 				System.out.println("while ist fertig ");
 				break;
@@ -106,8 +106,8 @@ public class Aufgabe3
 			try 
 			{
 				System.out.println("(Buffer)Bitte geben Sie den Pad ein: ");
-				dateiPfad = "musik1.mp3";
-				//dateiPfad = scan.nextLine();
+				//dateiPfad = "musik1.mp3";
+				dateiPfad = scan.nextLine();
 				initialStream = new FileInputStream(new File(dateiPfad));
 				System.out.println("while ist fertig ");
 				break;
