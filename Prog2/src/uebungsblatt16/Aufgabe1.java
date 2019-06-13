@@ -2,12 +2,11 @@ package uebungsblatt16;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Aufgabe1 
 {
@@ -16,7 +15,6 @@ public class Aufgabe1
 	public static void main(String[]args) 
 	{
 		String dateiname = "matNrNeu.txt";
-		
 		splitStudiengaenge(dateiname);
 	}
 	
@@ -41,12 +39,10 @@ public class Aufgabe1
 				int nummer = 0;
 				try 
 				{
-					
 					nummer = Integer.valueOf(line);
 					
 				}catch(Exception e) 
-				{
-					
+				{	
 				}
 				
 				if(nummer >= 5000000 && nummer <= 5099999 ) 
@@ -87,6 +83,8 @@ public class Aufgabe1
 		schreibeDatei(InfDateiname, matrikelnummernInf);
 		schreibeDatei(ECDateiname, matrikelnummernEC);
 	}
+	
+	
 	
 	public static void schreibeDatei(String zieldateiName, ArrayList<String> matrikelnummern) 
 	{
