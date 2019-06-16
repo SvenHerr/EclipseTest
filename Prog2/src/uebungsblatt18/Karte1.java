@@ -1,22 +1,22 @@
 package uebungsblatt18;
 
-public class Karte1 implements Comparable<Karte1>
+public class Karte1 implements Comparable<Object>
 {
 	private String farbe;
 	private String wert;
-	private int ID;
+	private String ID;
 
 	public Karte1() 
 	{
 		
 	}
-	public Karte1(String farbe, String wert, int ID) 
+	public Karte1(String farbe, String wert, String ID) 
 	{
 		this.farbe = farbe;
 		this.wert = wert;
 	}
 	
-	public int getID() 
+	public String getID() 
 	{
 		return ID;
 	}
@@ -36,10 +36,10 @@ public class Karte1 implements Comparable<Karte1>
 	{
 		return "Farbe: " +farbe+"  Wert: "+ wert;
 	}
-	
 	@Override
-	public int compareTo(Karte1 m)
+	public int compareTo(Object o) 
 	{
-		return -1;
+		Karte1 other = (Karte1) o;
+		return this.farbe.compareTo(other.farbe);
 	}
 }
