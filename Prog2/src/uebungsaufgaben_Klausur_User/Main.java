@@ -26,11 +26,11 @@ public class Main
 		}
 		System.out.println();
 		
-		UserManager a = new UserManager();
-		a.serialize(list);
+		UserManager usermanager = new UserManager();
+		usermanager.serialize(list);
 		
 		
-		List<User> listDeserialize = a.deserialize();
+		List<User> listDeserialize = usermanager.deserialize();
 		for(int i = 0; i < listDeserialize.size(); i++) 
 		{
 			System.out.println("Benutzername: " + listDeserialize.get(i).benutzername + " Passwort: "+listDeserialize.get(i).passwort);
