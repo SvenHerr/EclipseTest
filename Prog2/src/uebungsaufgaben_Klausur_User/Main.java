@@ -27,10 +27,25 @@ public class Main
 		System.out.println();
 		
 		UserManager usermanager = new UserManager();
+		try 
+		{
 		usermanager.serialize(list);
+		}catch(RuntimeException e ) 
+		{
+			System.out.println("Runtime Exception in serialize");
+		}
+		
+		List<User> listDeserialize = null;
+		try 
+		{
+			listDeserialize = usermanager.deserialize();
+			
+		}catch(RuntimeException e) 
+		{
+			System.out.println("Runtime Exception in Deserialize");
+		}
 		
 		
-		List<User> listDeserialize = usermanager.deserialize();
 		for(int i = 0; i < listDeserialize.size(); i++) 
 		{
 			System.out.println("Benutzername: " + listDeserialize.get(i).benutzername + " Passwort: "+listDeserialize.get(i).passwort);

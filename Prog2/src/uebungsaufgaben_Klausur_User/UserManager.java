@@ -12,7 +12,7 @@ import java.util.List;
 public class UserManager implements ObjectManager<User> 
 {
 	@Override
-	public void serialize(List<User> object) 
+	public void serialize(List<User> object) throws RuntimeException
 	{
 		ObjectOutputStream oos = null;
 		try 
@@ -40,7 +40,7 @@ public class UserManager implements ObjectManager<User>
 	}
 
 	@Override
-	public List<User> deserialize() 
+	public List<User> deserialize() throws RuntimeException
 	{
 		List<User> list = new ArrayList<User>();
 
@@ -49,31 +49,36 @@ public class UserManager implements ObjectManager<User>
 		try
 		{
 			ois = new ObjectInputStream(new FileInputStream("user.dat"));
+			User user = null;
 			do 
 			{
-				User user = (User) ois.readObject();
+				user = (User) ois.readObject();
 				list.add(user);
-			}while(true);
+				
+			}while(user != null);
+			System.out.println("Im aktiv");
+			return list;
 		}
 		catch (EOFException eo)
 		{
-			
+			System.out.println("Exception EOF");
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 			System.out.println("Exception deserialize");
-		}
-
-		try 
+			
+		}finally 
 		{
-			ois.close();
-		} 
-		catch (IOException e) 
-		{
-			System.out.println("Exception ois close");
+			try 
+			{
+				ois.close();
+			} 
+			catch (IOException e) 
+			{
+				System.out.println("Exception ois close");
+			}
 		}
-		
 		return list;
 	}
 }
