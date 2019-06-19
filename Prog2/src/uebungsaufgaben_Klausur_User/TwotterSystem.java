@@ -8,12 +8,14 @@ import java.util.Map;
 public class TwotterSystem 
 {
 	List<User> userList = new ArrayList<User>();
-	Map<User, Message> userListandMessage = new HashMap<User, Message>();
+	
 
 	
 	public User addMessage(User u, Message message) 
 	{
-		userListandMessage.put(u, message);
+		message.getMessage();
+		
+		
 		return null;
 	}
 	
@@ -34,7 +36,4 @@ public class TwotterSystem
 		
 		return null;
 	}
-	
-	
-
 }

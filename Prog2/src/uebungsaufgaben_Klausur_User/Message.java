@@ -3,7 +3,7 @@ package uebungsaufgaben_Klausur_User;
 public class Message 
 {
 	
-	//private final User author ;
+	private User author ;
 	private int charCounter ;
 	private String message ;
 	private String creationDate ;
