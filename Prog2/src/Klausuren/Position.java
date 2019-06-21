@@ -6,8 +6,6 @@ import java.util.List;
 public class Position  implements Comparable < Position > 
 {
 	int zeilennummer , spaltennummer ;
-	//List<Wort> wortList = new ArrayList();
-
 	
 	public Position(int z, int s) 
 	{
@@ -18,10 +16,15 @@ public class Position  implements Comparable < Position >
 	@Override
 	public int compareTo(Position o) 
 	{
-		
-		return 0;
+		if(o.zeilennummer < this.zeilennummer) 
+		{
+			return -1;
+		}else if(o.zeilennummer == this.zeilennummer) 
+		{
+			return 0;
+		}else 
+		{
+			return 1;
+		}
 	}
-	
-	 // Methode compareTo aus Comparable
-
 }

@@ -28,10 +28,20 @@ public class Main
 		
 		woerter.einfuegen( und , new Position (1 , 3));
 		woerter.einfuegen( und , new Position (3 , 7));
+		woerter.einfuegen( und , new Position (0 , 7));
 		
 		Position letztePosition = woerter.holeLetztePosition ( und );
 		Collection < Position > allePositionen = woerter.holeAlle ( und );
 		int anzahlVorkommen = woerter.anzahlVorkommen ( und );
+		
+		// Ausgabe
+		System.out.println("letzte Zeilennummer "+letztePosition.zeilennummer  + " letzte Spaltennummer " + letztePosition.spaltennummer);
+		System.out.println("AnzahlVorkommen " + anzahlVorkommen+ "\n");
+		
+		for(Position p : allePositionen) 
+		{
+			System.out.println("Alle Positionen von: "+ und.wort);
+			System.out.println("Zeilennummer "+p.zeilennummer + " Spaltennummer " + p.spaltennummer);
+		}	
 	}
-
 }

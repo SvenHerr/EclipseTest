@@ -50,9 +50,8 @@ public class Wort implements Comparable < Wort >
 	@Override
 	public int compareTo(Wort o) 
 	{
-		o.wort.compareTo(this.wort);
+		//o.wort.compareTo(this.wort);
 		
-		
-		return 0;
+		return o.wort.compareTo(this.wort);
 	}
 }
