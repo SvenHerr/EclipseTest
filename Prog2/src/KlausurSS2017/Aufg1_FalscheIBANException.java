@@ -1,4 +1,4 @@
-package Klausuren;
+package KlausurSS2017;
 
 public class Aufg1_FalscheIBANException extends RuntimeException
 {

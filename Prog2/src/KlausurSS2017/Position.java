@@ -1,4 +1,4 @@
-package Klausuren;
+package KlausurSS2017;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +11,24 @@ public class Position  implements Comparable < Position >
 	{
 		this.zeilennummer = z;
 		this.spaltennummer = s;
+	}
+	
+	public void setZeilennummer(int zeilennummer) 
+	{
+		this.zeilennummer = zeilennummer;
+	}
+	public int getZeilennummer() 
+	{
+		return this.zeilennummer;
+	}
+	
+	public void setSpaltennummer(int spaltennummer) 
+	{
+		this.spaltennummer = spaltennummer;
+	}
+	public int getSpaltennummer() 
+	{
+		return this.spaltennummer;
 	}
 	
 	@Override

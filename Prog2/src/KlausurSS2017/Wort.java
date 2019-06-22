@@ -1,4 +1,4 @@
-package Klausuren;
+package KlausurSS2017;
 
 public class Wort implements Comparable < Wort > 
 {

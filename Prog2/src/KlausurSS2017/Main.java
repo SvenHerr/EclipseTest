@@ -1,13 +1,19 @@
-package Klausuren;
+package KlausurSS2017;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+
+import KlausurSS2017.Warenkorb.Posten;
+
 
 public class Main 
 {
 	public static void main(String[] args) 
 	{
 		//aufgabe1();
-		aufgabe2();
+		//aufgabe2();
+		aufgabe3();
 	}
 
 	public static void aufgabe1() 
@@ -43,5 +49,27 @@ public class Main
 			System.out.println("Alle Positionen von: "+ und.wort);
 			System.out.println("Zeilennummer "+p.zeilennummer + " Spaltennummer " + p.spaltennummer);
 		}	
+	}
+	
+	public static void aufgabe3() 
+	{
+		//Kunde k = new Kunde("Horst");
+		
+		Warenkorb warenkorb = new Warenkorb();
+		warenkorb.addPosten("Posten1");
+		warenkorb.addPosten("Posten2");
+		
+		
+		
+		List<Posten> postenList = warenkorb.getAllPosten();
+		for(Posten p : postenList) 
+		{
+			System.out.println(p.getName());
+		}
+		
+		
+		
+		
+		
 	}
 }

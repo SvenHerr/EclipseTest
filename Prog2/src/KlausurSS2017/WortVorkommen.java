@@ -1,17 +1,14 @@
-package Klausuren;
+package KlausurSS2017;
 
-import java.util.List;
 import java.util.Map;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class WortVorkommen 
 {
 	Map<Wort, ArrayList<Position>> positionList = new HashMap<Wort, ArrayList<Position>>();
 	ArrayList<Position> positionenVonWort = new ArrayList<Position>();
-	
 	
 	public void einfuegen(Wort wort, Position position) 
 	{		
