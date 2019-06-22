@@ -1,8 +1,8 @@
 package KlausurSS15;
 
-public class Dienstleistungen implements IVerrechenbar
+public class Dienstleistungen extends UmsatzHelper implements IVerrechenbar 
 {
-	
+	// muss nicht mit vererbung gemacht werden
 	private String kundenname;
 	private double stundenanzahl;
 	private double stundensatz;
@@ -26,8 +26,4 @@ public class Dienstleistungen implements IVerrechenbar
 	);
 		return ges_Betrag;
 	}
-	
-	
-	
-
 }

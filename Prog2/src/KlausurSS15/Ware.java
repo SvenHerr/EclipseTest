@@ -1,7 +1,8 @@
 package KlausurSS15;
 
-public class Ware implements IVerrechenbar 
+public class Ware extends UmsatzHelper implements IVerrechenbar 
 {
+	// muss nicht mit vererbung gemacht werden
 	private String bestellnr;
 	private double stuckzahl;
 	private double stueckpreis;
