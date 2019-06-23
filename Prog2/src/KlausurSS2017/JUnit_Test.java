@@ -1,4 +1,4 @@
-package Klausuren;
+package KlausurSS2017;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
