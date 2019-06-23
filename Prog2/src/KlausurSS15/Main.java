@@ -1,10 +1,14 @@
 package KlausurSS15;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 public class Main {
 	public static void main(String[] args) 
 	{
 		//aufgabe1();
-		aufgabe2();
+		//aufgabe2();
+		aufgabe5();
 	}
 
 	public static void aufgabe1() 
@@ -44,5 +48,16 @@ public class Main {
 		h.sondertilgung(500);
 		System.out.println(h.toString());
 		
+	}
+	public static void aufgabe5() 
+	{
+		//Mitarbeiter.legDateiAn();
+		//Mitarbeiter.gibCollectionAus(Mitarbeiter.leseDatei());
+		
+		// aufgabe f
+		Mitarbeiter.legDateiAn();
+		Collection<Mitarbeiter> collection = Mitarbeiter.leseDatei();
+		Mitarbeiter[] array = Mitarbeiter.sortiere(collection);
+		Mitarbeiter.gibCollectionAus(Arrays.asList(array));
 	}
 }
