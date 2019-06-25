@@ -14,7 +14,17 @@ public class Sender
 	
 	public String toString() 
 	{
-		return "Kanal Nr: "+kanalNr + "Name: " +name;
+		return "Kanal Nr: "+kanalNr + " Name: " +name;
 	}
 
+	public int getKanalNr() 
+	{
+		
+		return this.kanalNr;
+	}
+	
+	public String getSenderName() 
+	{
+		return this.name;
+	}
 }

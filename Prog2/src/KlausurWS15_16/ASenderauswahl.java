@@ -13,7 +13,7 @@ public abstract class ASenderauswahl
 	};
 	
 	public abstract Sender wechselZuSenderMitNamen(String name);
-	public abstract Sender wechselZuSenderMitNamen(int kanalNr);
+	public abstract Sender wechselZuSenderMitNummer(int kanalNr);
 	
 	public Sender nextSender() 
 	{

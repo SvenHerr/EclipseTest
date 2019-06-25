@@ -76,6 +76,23 @@ public class Main
 	
 	public static void aufgabe3() 
 	{
+		String [] strArray = {"ARD", "ZDF", "EinsPlus"};	
+		Senderauswahl sAuswahl =new Senderauswahl(strArray);
+		
+		System.out.println(sAuswahl.wechselZuSenderMitNamen("ARD"));
+		System.out.println(sAuswahl.wechselZuSenderMitNamen("ZDF"));
+		System.out.println(sAuswahl.wechselZuSenderMitNamen("EinsPlus"));
+		System.out.println(sAuswahl.wechselZuSenderMitNamen(""));
+		System.out.println(sAuswahl.wechselZuSenderMitNamen(null));
+		
+		/*System.out.println(sAuswahl.wechselZuSenderMitNummer(-2));
+		System.out.println(sAuswahl.wechselZuSenderMitNummer(0));
+		System.out.println(sAuswahl.wechselZuSenderMitNummer(1));
+		System.out.println(sAuswahl.wechselZuSenderMitNummer(2));
+		System.out.println(sAuswahl.wechselZuSenderMitNummer(4));
+		System.out.println(sAuswahl.wechselZuSenderMitNummer(3));*/
+		
+		//System.out.println(sAuswahl.toString());
 		
 	}
 }
