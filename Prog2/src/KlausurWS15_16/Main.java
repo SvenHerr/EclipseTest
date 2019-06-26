@@ -1,5 +1,8 @@
 package KlausurWS15_16;
 
+import java.util.HashMap;
+import java.util.Map.Entry;
+
 public class Main 
 {
 	public static void main(String[]args) 
@@ -7,7 +10,8 @@ public class Main
 		//aufgabe1();
 		//aufgabe2();
 		//aufgabe2Option1();
-		aufgabe3();
+		//aufgabe3();
+		aufgabe4();
 	}
 	public static void aufgabe1() 
 	{
@@ -83,7 +87,7 @@ public class Main
 		System.out.println(sAuswahl.wechselZuSenderMitNamen("ZDF"));
 		System.out.println(sAuswahl.wechselZuSenderMitNamen("EinsPlus"));
 		System.out.println(sAuswahl.wechselZuSenderMitNamen(""));
-		System.out.println(sAuswahl.wechselZuSenderMitNamen(null));
+		System.out.println(sAuswahl.wechselZuSenderMitNamen(null)); 
 		
 		/*System.out.println(sAuswahl.wechselZuSenderMitNummer(-2));
 		System.out.println(sAuswahl.wechselZuSenderMitNummer(0));
@@ -93,6 +97,21 @@ public class Main
 		System.out.println(sAuswahl.wechselZuSenderMitNummer(3));*/
 		
 		//System.out.println(sAuswahl.toString());
-		
 	}
+	public static void aufgabe4() 
+	{
+		HashMap<String, String> map = Morse.getMorseCodeMap(Morse.tabelle);
+		
+		System.out.println("Komplette Morse Liste:");
+		for(Entry<String, String> pair : map.entrySet()) 
+		{
+			System.out.println(pair.getKey() + " " + pair.getValue());
+		}
+		System.out.println();
+		
+		String buchstaben = "CAB";
+		System.out.println("Folgende Buchstaben("+ buchstaben +") vom String in Morsezeichen umgewandelt");
+		System.out.println(Morse.zeichenketteToMorse(buchstaben));
+	}
+	
 }

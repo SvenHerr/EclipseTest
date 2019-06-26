@@ -55,7 +55,7 @@ public class Computer implements ProgrammInterface
 
 	@Override
 	public void führeAus() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 }
