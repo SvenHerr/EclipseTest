@@ -1,8 +1,14 @@
 package Tutorium_Blatt7;
 
-public interface Programm 
+public class Programm 
 {
 	
-	void führeAus();
+	
+	
+	public static void ausgabe() 
+	{
+		System.out.println("Hallo Welt");
+	}
+	
 
 }

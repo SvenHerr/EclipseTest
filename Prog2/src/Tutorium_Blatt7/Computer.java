@@ -1,6 +1,6 @@
 package Tutorium_Blatt7;
 
-public class Computer 
+public class Computer implements ProgrammInterface
 {
 	int seriennummer;
 	String hersteller;
@@ -16,9 +16,8 @@ public class Computer
 	}
 	
 	
-	public static void ausfuehren(Programm programm) 
+	public static void ausfuehren(ProgrammInterface programm) 
 	{
-		
 		Thread thread = new Thread() 
 		{
 			@Override
@@ -26,7 +25,7 @@ public class Computer
 			{
 				programm.führeAus();
 				try {
-					if(this.betriebessystem == Betriebssystem.Windws10)
+					//if(this.betriebessystem == Betriebssystem.Windws10)
 					Thread.sleep(100);
 					Thread.sleep(5000);
 				} 
@@ -36,10 +35,27 @@ public class Computer
 				}
 			}
 		};
+		
+		int anzahlKernel = 4; // TODO nur Platzhalter
+		for( int i = 0; i < anzahlKernel; i ++) 
+		{
+			thread.start();
+		}
+	}
+	
+	public static void main(String[]args) 
+	{
+		Computer computer = new ComputerBuilder(111, "Dell")
+				.withBetriebssystem(Betriebssystem.Windows7)
+				.withKernAnzahl(20).build();
+		
+		//computer.ausfuehren();
+	}
 
-		thread.start();
-		thread.start();
-		thread.start();
-		thread.start();
+
+	@Override
+	public void führeAus() {
+		// TODO Auto-generated method stub
+		
 	}
 }
