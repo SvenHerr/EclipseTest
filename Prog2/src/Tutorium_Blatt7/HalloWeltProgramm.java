@@ -1,6 +1,7 @@
 package Tutorium_Blatt7;
 
-public class HalloWeltProgramm implements ProgrammInterface {
+public class HalloWeltProgramm implements ProgrammInterface 
+{
 
 	public void führeAus()
 	{

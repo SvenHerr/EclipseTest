@@ -2,6 +2,6 @@ package Tutorium_Blatt7;
 
 public enum Betriebssystem 
 {
-	Windws10, Linux, Windows7;
+	Windws10, Linux, Windows7, WindowsXP;
 
 }
