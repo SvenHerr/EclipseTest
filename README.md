@@ -1,4 +1,4 @@
-# EclipseTest
+# Prog2 Aufgaben und AltKlausuren
 
 Hello,<br>
 this is my automatically pushed version with eclipse.<br>
