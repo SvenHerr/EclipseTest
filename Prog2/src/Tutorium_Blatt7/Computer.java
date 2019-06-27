@@ -16,41 +16,40 @@ public class Computer implements ProgrammInterface
 	}
 	
 	
-	public static void ausfuehren(ProgrammInterface programm) 
+	public void ausfuehren(ProgrammInterface programm) 
 	{
-		Thread thread = new Thread() 
+		for( int i = 0; i < this.kernAnzahl; i ++) 
 		{
-			@Override
-			public void run() 
-			{
-				programm.führeAus();
-				try {
-					//if(this.betriebessystem == Betriebssystem.Windws10)
-					Thread.sleep(100);
-					Thread.sleep(5000);
-				} 
-				catch (Exception e) 
-				{
-
-				}
-			}
-		};
 		
-		int anzahlKernel = 4; // TODO nur Platzhalter
-		for( int i = 0; i < anzahlKernel; i ++) 
-		{
+			Thread thread = new Thread() 
+			{
+				@Override
+				public void run() 
+				{
+					programm.führeAus();
+					try {
+						
+						//switch(this.)
+						//if(this.betriebessystem == Betriebssystem.Windws10)
+						Thread.sleep(100);
+						Thread.sleep(5000);
+					} 
+					catch (Exception e) 
+					{
+	
+					}
+				}
+			};
+		
 			thread.start();
+			
+			//int anzahlKernel = 4; // TODO nur Platzhalter
+			
+			
 		}
 	}
 	
-	public static void main(String[]args) 
-	{
-		Computer computer = new ComputerBuilder(111, "Dell")
-				.withBetriebssystem(Betriebssystem.Windows7)
-				.withKernAnzahl(20).build();
-		
-		//computer.ausfuehren();
-	}
+	
 
 
 	@Override
