@@ -1,5 +1,6 @@
 package KlausurWS14_15;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Aktiendepot
@@ -44,23 +45,26 @@ public class Aktiendepot
 	public Aktie[] alleaktienNachNamen() 
 	{
 		Aktie[] result1 = alleakien();
-		List<Aktie> akt = new ArrayList<Aktie>();
+		/*List<Aktie> akt = new ArrayList<Aktie>();
+		
 		int i = 0;
+		
 		for(Aktie a : result) 
 		{
 			akt.add(result[i]);
 			i++;
-		}
+		}*/
 		
-		Collections.sort(akt);
+		// !!! Arrays.asList(array)  merken !!!!
+		Collections.sort(Arrays.asList(result1));
 		
-		i = 0;
-		
+		/*
 		for(Aktie a : akt) 
 		{
 			result1[i] = a;
 			i++;
-		}
+		}*/
+		
 		return result1;
 	}
 	
