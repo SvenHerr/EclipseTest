@@ -1,12 +1,13 @@
 package KlausurWS14_15;
 
-import java.lang.reflect.Array;
 import java.util.*;
+import java.util.Comparator;
 
 public class Aktiendepot
 {
 	Map<String,Aktie> aktien = new HashMap<String,Aktie>();
 	Aktie[] result;
+	Aktie[] result1;
 	
 	public Aktiendepot(Map<String, Aktie> aktien) 
 	{
@@ -44,7 +45,7 @@ public class Aktiendepot
 	
 	public Aktie[] alleaktienNachNamen() 
 	{
-		Aktie[] result1 = alleakien();
+		result1 = alleakien();
 		/*List<Aktie> akt = new ArrayList<Aktie>();
 		
 		int i = 0;
@@ -70,6 +71,27 @@ public class Aktiendepot
 	
 	public Aktie[] alleaktienNachWert() 
 	{
+		result1 = alleakien();
 		
+		Collections.sort(Arrays.asList(result1), new NachWert());
+		
+		return result1;
+	}
+	
+	public class NachWert implements Comparator<Aktie> 
+	{
+		 public int compare(Aktie a, Aktie b) 
+	    { 
+			 if(a.wert() > b.wert()) 
+			 {
+				 return 1;
+			 }else if(a.wert() < b.wert()) 
+			 {
+				 return -1;
+			 }else 
+			 {
+				 return 0; 
+			 }  
+	    } 
 	}
 }

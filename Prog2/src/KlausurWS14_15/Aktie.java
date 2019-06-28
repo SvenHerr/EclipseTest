@@ -1,5 +1,6 @@
 package KlausurWS14_15;
 
+
 public class Aktie implements Comparable<Aktie>
 {
 	private String name;
@@ -62,5 +63,4 @@ public class Aktie implements Comparable<Aktie>
 			return 1;
 		}
 	}
-	
 }
