@@ -72,7 +72,7 @@ public class Aktiendepot
 	public Aktie[] alleaktienNachWert() 
 	{
 		result1 = alleakien();
-		
+
 		Collections.sort(Arrays.asList(result1), new NachWert());
 		
 		return result1;
@@ -80,18 +80,20 @@ public class Aktiendepot
 	
 	public class NachWert implements Comparator<Aktie> 
 	{
-		 public int compare(Aktie a, Aktie b) 
+		public int compare(Aktie a, Aktie b) 
 	    { 
-			 if(a.wert() > b.wert()) 
-			 {
+			if(a.wert() > b.wert()) 
+			{
 				 return 1;
-			 }else if(a.wert() < b.wert()) 
-			 {
-				 return -1;
-			 }else 
-			 {
-				 return 0; 
-			 }  
-	    } 
+			}
+			else if(a.wert() < b.wert()) 
+			{
+				return -1;
+			}
+			else 
+			{
+				return 0; 
+			}
+	    }
 	}
 }
