@@ -2,6 +2,7 @@ package KlausurWS14_15;
 
 import java.lang.reflect.Array;
 import java.util.*;
+import java.util.Comparator;
 
 public class Aktiendepot
 {
@@ -70,6 +71,26 @@ public class Aktiendepot
 	
 	public Aktie[] alleaktienNachWert() 
 	{
+		Aktie[] result1 = alleakien();
 		
+		Collections.sort(Arrays.asList(result1), new NachWert());
+		
+		return result1;
+	}
+	
+	
+	public class NachName implements Comparator<Aktie> 
+	{
+		 public int compare(Aktie a, Aktie b) 
+	    { 
+	        return 0; 
+	    } 
+	}
+	public class NachWert implements Comparator<Aktie> 
+	{
+		 public int compare(Aktie a, Aktie b) 
+	    { 
+	        return 0; 
+	    } 
 	}
 }

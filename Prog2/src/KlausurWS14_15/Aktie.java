@@ -1,6 +1,8 @@
 package KlausurWS14_15;
 
-public class Aktie implements Comparable<Aktie>
+import java.util.Comparator;
+
+public class Aktie implements Comparable<Aktie>, Comparator<Aktie>
 {
 	private String name;
 	private double kurs;
@@ -61,6 +63,12 @@ public class Aktie implements Comparable<Aktie>
 			
 			return 1;
 		}
+	}
+
+	@Override
+	public int compare(Aktie o1, Aktie o2) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 }
