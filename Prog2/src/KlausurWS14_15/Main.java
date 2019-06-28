@@ -26,12 +26,18 @@ public class Main
 		System.out.println(eins.compareTo(zwei));
 		
 		Aktiendepot ad = new Aktiendepot(map);
-		
+		/*
 		Aktie[] aktie = ad.alleaktienNachNamen();
 		for(Aktie akt : aktie) 
 		{
 			System.out.println(akt.getName());
-		}
+		}*/
 		
+		// f 
+		Aktie[] aktie1 = ad.alleaktienNachWert();
+		for(Aktie akt : aktie1) 
+		{
+			System.out.println(akt.getName()+ " " + akt.wert());
+		}	
 	}
 }
