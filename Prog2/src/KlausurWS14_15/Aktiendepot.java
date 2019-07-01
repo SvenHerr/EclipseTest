@@ -46,25 +46,9 @@ public class Aktiendepot
 	public Aktie[] alleaktienNachNamen() 
 	{
 		result1 = alleakien();
-		/*List<Aktie> akt = new ArrayList<Aktie>();
-		
-		int i = 0;
-		
-		for(Aktie a : result) 
-		{
-			akt.add(result[i]);
-			i++;
-		}*/
 		
 		// !!! Arrays.asList(array)  merken !!!!
 		Collections.sort(Arrays.asList(result1));
-		
-		/*
-		for(Aktie a : akt) 
-		{
-			result1[i] = a;
-			i++;
-		}*/
 		
 		return result1;
 	}
