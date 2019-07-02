@@ -1,4 +1,4 @@
-package testPlusException;
+package uebungsblatt12_testPlusException.copy;
 
 public class Bruch 
 {

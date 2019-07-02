@@ -1,4 +1,4 @@
-package testPlusException;
+package uebungsblatt12_testPlusException.copy;
 
 import static org.junit.Assert.fail;
 
