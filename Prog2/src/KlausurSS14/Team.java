@@ -88,9 +88,21 @@ public class Team extends AbstractTeam
 	@Override
 	void substitutePlayer(String nameOfReplacedPlayer, String nameOfNewPlayer) throws IllegalArgumentException 
 	{
-		//throw new IllegalArgumentException("Einzuwechselnder Spieler bereits im Team"); 
-		
-		//throw new IllegalArgumentException("Auszuwechselnder Spieler nicht im Team"); 
-		
+		try 
+		{
+			addPlayerToTeam(nameOfNewPlayer);
+		}
+		catch (IllegalArgumentException ex) 
+		{
+			throw new IllegalArgumentException("Einzuwechselnder Spieler bereits im Team"); 
+		}
+		try 
+		{
+			removePlayerFromTeam(nameOfReplacedPlayer);
+		}
+		catch (IllegalArgumentException ex) 
+		{
+			throw new IllegalArgumentException("Auszuwechselnder Spieler nicht im Team"); 
+		}	
 	}
 }
