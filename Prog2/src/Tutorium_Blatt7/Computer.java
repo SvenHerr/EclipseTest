@@ -30,14 +30,13 @@ public class Computer
 						if(betriebessystem == Betriebssystem.Windws10) 
 						{
 							Thread.sleep(100);
-						}else if(betriebessystem == Betriebssystem.WindowsXP) 
+						}
+						else if(betriebessystem == Betriebssystem.WindowsXP) 
 						{
 							Thread.sleep(5000);
 						}
-						
-						
 					} 
-					catch (Exception e) 
+					catch (InterruptedException e) 
 					{
 					}
 				}

@@ -24,6 +24,5 @@ public class Abteilungsleiter extends Angestellter
 		egon.befördern(hans);
 		
 		System.out.println(hans.getGehaltsfaktor());
-		
 	}
 }

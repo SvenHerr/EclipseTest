@@ -67,6 +67,7 @@ public class Team extends AbstractTeam
 	{
 		if(playerInTeam(name)) 
 		{
+			//Option A start
 			for(Player p : members) 
 			{
 				if(p.name.equals(name)) 
@@ -74,16 +75,22 @@ public class Team extends AbstractTeam
 					members.remove(p);
 					return p;
 				}
-			}
+			}//Option A Ende
+			
+			//Option B Start
+			//members.remove(playerByName(name));
+			// Option B Ende
 		}
 		throw new IllegalArgumentException("Spieler nicht im Team") ;
 	}
 	
 
 	@Override
-	void substitutePlayer(String nameOfReplacedPlayer, String nameOfNewPlayer) throws IllegalArgumentException {
+	void substitutePlayer(String nameOfReplacedPlayer, String nameOfNewPlayer) throws IllegalArgumentException 
+	{
+		//throw new IllegalArgumentException("Einzuwechselnder Spieler bereits im Team"); 
 		
-		
+		//throw new IllegalArgumentException("Auszuwechselnder Spieler nicht im Team"); 
 		
 	}
 }
