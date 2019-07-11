@@ -29,20 +29,27 @@ public class Aufgabe3
 		System.out.println("Mit Buffer:" + duration);
 		
 	}
+	static String dateiPfad = null; 
+	static String dateiName = null;
+	static String dateiFile = null;
 	
 	public static boolean teilaufgabeA() 
 	{
 		Scanner scan = new Scanner(System.in);
 		
 		FileInputStream fis = null;
-		String dateiPfad = null; 
+		//String dateiPfad = null; 
+		//String dateiName = null;
+		//String dateiFile = null;
 		do 
 		{
 			try 
 			{
 				System.out.println("Bitte geben Sie den Pad ein: ");
-				//dateiPfad = "musik1.mp3";
-				dateiPfad = scan.nextLine();
+				//dateiPfad = "Files/musik1.mp3";
+				dateiName = scan.nextLine();
+				dateiFile = "Files/";
+				dateiPfad = dateiFile + dateiName;
 				fis = new FileInputStream(dateiPfad);
 				System.out.println("while ist fertig ");
 				break;
@@ -54,7 +61,7 @@ public class Aufgabe3
 			
 		}while(true);
 		
-		String dateiPfadCopy = "Kopie_von_"+dateiPfad;
+		String dateiPfadCopy = dateiFile + "Kopie_von_"+dateiName;
 		
 		try
 		{
@@ -76,6 +83,7 @@ public class Aufgabe3
 			}
 			catch (IOException e) 
 			{
+				e.printStackTrace();
 			}
 			try 
 			{
@@ -83,6 +91,7 @@ public class Aufgabe3
 			}
 			catch (IOException e) 
 			{	
+				e.printStackTrace();
 			}
 		}
 		catch (IOException e)
@@ -100,14 +109,21 @@ public class Aufgabe3
 		
 		InputStream initialStream = null;
 		OutputStream outStream = null;
-		String dateiPfad = null; 
+		//String dateiPfad = null; 
+		//String dateiName = null;
+		//String dateiFile = null;
+		
 		do 
 		{
 			try 
 			{
 				System.out.println("(Buffer)Bitte geben Sie den Pad ein: ");
-				//dateiPfad = "musik1.mp3";
-				dateiPfad = scan.nextLine();
+				//dateiPfad = "Files/musik1.mp3";
+
+				dateiName = scan.nextLine();
+				dateiFile = "Files/";
+				dateiPfad = dateiFile + dateiName;
+				
 				initialStream = new FileInputStream(new File(dateiPfad));
 				System.out.println("while ist fertig ");
 				break;
@@ -118,7 +134,7 @@ public class Aufgabe3
 			}
 		}while(true);
 		
-		String dateiPfadCopy = "BufferKopie_von_"+dateiPfad;
+		String dateiPfadCopy = dateiFile + "BufferKopie_von_"+dateiName;
 		
 		try
 		{

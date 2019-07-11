@@ -14,7 +14,7 @@ public class Aufgabe1
 	
 	public static void main(String[]args) 
 	{
-		String dateiname = "matNrNeu.txt";
+		String dateiname = "File/matNrNeu.txt";
 		splitStudiengaenge(dateiname);
 	}
 	

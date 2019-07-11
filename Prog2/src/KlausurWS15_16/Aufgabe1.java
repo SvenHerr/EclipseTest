@@ -69,7 +69,7 @@ public class Aufgabe1
 	/*
 	public static void main(String[]args) 
 	{
-		//String fileName = "IntValues.txt";
+		//String fileName = "File/IntValues.txt";
 		//schreibeWerteAlsIntDatei(fileName);
 		//System.out.println(liesWerteAusIntDatei(fileName));
 		

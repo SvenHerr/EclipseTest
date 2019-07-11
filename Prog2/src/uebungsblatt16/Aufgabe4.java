@@ -17,8 +17,8 @@ public class Aufgabe4
 	
 	public static void translaterLettersIntoNumbers() 
 	{
-		String datenquelle = "Zeichenkontakte.txt";
-		String datensenke = "Nummernkontakte.txt";
+		String datenquelle = "File/Zeichenkontakte.txt";
+		String datensenke = "File/Nummernkontakte.txt";
 		ArrayList<String> nummernStringArray = new ArrayList<String>();
 		StringBuilder nummerString= null;
 		

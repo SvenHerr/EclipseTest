@@ -15,7 +15,7 @@ public class Main
 	}
 	public static void aufgabe1() 
 	{
-		String fileName = "IntValues.txt";
+		String fileName = "File/IntValues.txt";
 		Aufgabe1.schreibeWerteAlsIntDatei(fileName);
 		System.out.println(Aufgabe1.liesWerteAusIntDatei(fileName));
 				
