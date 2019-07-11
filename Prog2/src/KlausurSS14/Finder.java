@@ -20,7 +20,8 @@ public class Finder
 	{
 		for (String s : filenames) 
 		{
-			try (FileReader fr = new FileReader(s); BufferedReader br = new BufferedReader(fr)) 
+			//try (FileReader fr = new FileReader(s); BufferedReader br = new BufferedReader(fr)) 
+			try (BufferedReader br = new BufferedReader(new FileReader(s))) 
 			{
 				String line = null;
 				int zeilenNummer = 0;
@@ -123,7 +124,7 @@ public class Finder
 		Finder finder = new Finder();
 		BufferedReader br = finder.getSystemInAsBufferedReader();
 		String searchString = null;
-		String[] fileNames = { "fil1.txt", "fil0.txt", "fil2.txt" };
+		String[] fileNames = { "file1.txt", "file0.txt", "file2.txt" };
 
 		try 
 		{
