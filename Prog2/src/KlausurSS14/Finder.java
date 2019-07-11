@@ -124,7 +124,7 @@ public class Finder
 		Finder finder = new Finder();
 		BufferedReader br = finder.getSystemInAsBufferedReader();
 		String searchString = null;
-		String[] fileNames = { "file1.txt", "file0.txt", "file2.txt" };
+		String[] fileNames = { "Files/file1.txt", "Files/file0.txt", "Files/file2.txt" };
 
 		try 
 		{
