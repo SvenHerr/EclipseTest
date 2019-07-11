@@ -9,7 +9,7 @@ public class ReadPersonClass
 	{
 		try 
 		{
-			ObjectInputStream ois = new ObjectInputStream(new FileInputStream("person.dat"));
+			ObjectInputStream ois = new ObjectInputStream(new FileInputStream("Files/person.dat"));
 			Person person = (Person) ois.readObject();
 			ois.close();
 			System.out.println(person.vorname + " " + person.name + " " + person.pw);

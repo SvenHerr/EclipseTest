@@ -9,7 +9,7 @@ public class WritePersonClass
 		try 
 		{
 			Person p = new Person("Doe", "John", "123");
-			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("person.dat"));
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Files/person.dat"));
 			oos.writeObject(p);
 			oos.close();
 		} 
