@@ -20,14 +20,14 @@ public class Finder
 	{
 		for (String s : filenames) 
 		{
-			try (FileReader fr = new FileReader(s); BufferedReader bf = new BufferedReader(fr)) 
+			try (FileReader fr = new FileReader(s); BufferedReader br = new BufferedReader(fr)) 
 			{
 				String line = null;
 				int zeilenNummer = 0;
 
 				do 
 				{
-					line = bf.readLine();
+					line = br.readLine();
 					zeilenNummer++;
 					if (line == null) 
 					{

@@ -1,6 +1,6 @@
 package uebungsaufgaben_Klausur;
 
-public class MusikStueck 
+public class MusikStueck<MusikStueck>
 {
 	protected String titel;     // Name des Musikstueckes
 	protected String interpret;    // Gruppe/Saenger des Stueckes
@@ -46,6 +46,12 @@ public class MusikStueck
 	@Override
 	public String toString() 
 	{
-		return "MusikStueck [titel=" + titel + ", interpret=" + interpret + ", laenge=" + laenge + "]";
+		return "Titel= " + titel+"\n" + "Interpret= " + interpret+"\n" + "Laenge= " + laenge+"\n";
 	}
+	/*
+	public static void main(String[]args) 
+	{
+		MusikStueck a = new MusikStueck("ka", "InterpretTest", 5);
+		System.out.println(a.toString());
+	}*/
 }
