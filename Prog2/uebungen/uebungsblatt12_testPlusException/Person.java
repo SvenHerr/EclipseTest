@@ -1,4 +1,4 @@
-package uebungsblatt12_testPlusException.copy;
+package uebungsblatt12_testPlusException;
 
 public class Person 
 {
