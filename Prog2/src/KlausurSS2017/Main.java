@@ -1,6 +1,5 @@
 package KlausurSS2017;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -11,9 +10,17 @@ public class Main
 {
 	public static void main(String[] args) 
 	{
-		//aufgabe1();
-		//aufgabe2();
-		aufgabe3();
+		aufgabe1();
+		//aufgabe2();		
+		
+						//--------------------------//
+					//									//
+				//											//
+			// Aufgabe 3 ist nicht richtig gelößt. Unbedingt überarbeiten //
+				//											//
+					//									//
+						//	-----------------------//
+		//aufgabe3();
 	}
 
 	public static void aufgabe1() 
@@ -21,9 +28,9 @@ public class Main
 		String IBAN = "DE2130120400000BYI1522";
 		System.out.println(Aufgabe1.ibanCheck(IBAN));
 
-		Aufgabe1.ibanAusDateiLesen("IBAN_Datei.txt");
+		Aufgabe1.ibanAusDateiLesen("Files/IBAN_Datei.txt");
 		
-		String[] fileNames = { "IBAN_Datei.txt", "IBAN_Datei1.txt", "IBAN_Datei2.txt", "IBAN_Datei3.txt" };
+		String[] fileNames = { "Files/IBAN_Datei.txt", "Files/IBAN_Datei1.txt", "Files/IBAN_Datei2.txt", "Files/IBAN_Datei3.txt" };
 		Aufgabe1.dateienTest(fileNames);
 	}
 
@@ -54,11 +61,18 @@ public class Main
 	public static void aufgabe3() 
 	{
 		//Kunde k = new Kunde("Horst");
-		
+				
+					//--------------------------//
+				//									//
+			//											//
+		// Aufgabe 3 ist nicht richtig gelößt. Unbedingt überarbeiten //
+			//
+				//										//
+					//	-----------------------//
+						
 		Warenkorb warenkorb = new Warenkorb();
 		warenkorb.addPosten("Posten1");
 		warenkorb.addPosten("Posten2");
-		
 		
 		
 		List<Posten> postenList = warenkorb.getAllPosten();
@@ -67,9 +81,7 @@ public class Main
 			System.out.println(p.getName());
 		}
 		
-		
-		
-		
-		
+		// Tutorium
+		//Warenkorb wk = new WarenkorbBuilder(Kunde k).addPosten("1-1-1", "...").build(); 	
 	}
 }

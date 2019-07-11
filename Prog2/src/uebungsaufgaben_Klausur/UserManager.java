@@ -1,4 +1,4 @@
-package uebungsaufgaben_Klausur_User;
+package uebungsaufgaben_Klausur;
 
 import java.io.EOFException;
 import java.io.FileInputStream;

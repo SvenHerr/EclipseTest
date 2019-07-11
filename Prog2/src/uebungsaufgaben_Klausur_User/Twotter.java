@@ -2,6 +2,8 @@ package uebungsaufgaben_Klausur_User;
 
 import java.util.List;
 
+import uebungsaufgaben_Klausur.User;
+
 public class Twotter 
 {
 	public static void main(String[] args) 

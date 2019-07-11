@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import uebungsaufgaben_Klausur.User;
+
 public class TwotterSystem 
 {
 	List<User> userList = new ArrayList<User>();

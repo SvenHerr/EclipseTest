@@ -1,5 +1,7 @@
 package uebungsaufgaben_Klausur_User;
 
+import uebungsaufgaben_Klausur.User;
+
 public class Message 
 {
 	
