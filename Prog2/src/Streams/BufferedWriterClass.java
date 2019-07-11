@@ -15,8 +15,8 @@ public class BufferedWriterClass
 					"Anfang Zeile 4 .................Ende Zeile 4 "+"\n"+
 					"Anfang Zeile 5 .................Ende Zeile 5 "+"\n";
 			
-			br.write(str);
-				
+			br.newLine();
+			br.write(str);	
 		}
 		catch (Exception e)
 		{

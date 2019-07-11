@@ -11,8 +11,6 @@ import org.omg.CORBA.portable.InputStream;
 
 public class Aufgabe3 
 {
-	
-	
 	public static void main(String[] args) 
 	{
 		final int PORT = 5000;
@@ -34,5 +32,4 @@ public class Aufgabe3
 			e.printStackTrace();
 		}
 	}
-
 }

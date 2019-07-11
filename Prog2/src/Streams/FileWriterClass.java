@@ -6,7 +6,7 @@ public class FileWriterClass
 {
 	public static void main(String[] args)
 	{
-		try(FileWriter fw = new FileWriter("newText.txt");)
+		try(FileWriter fw = new FileWriter("hello.txt");)
 		{
 			fw.write("Hello World!   " + FileWriterClass.class );
 			fw.close();
